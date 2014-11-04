@@ -65,6 +65,7 @@
 		(agent_in 4_2)
 		(box_in 4_6)
 		(box_in 5_5)
+		
 	)
 	(:goal (and (box_in 1_7)
 				(box_in 2_7)
