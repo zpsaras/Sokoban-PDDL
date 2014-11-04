@@ -1,0 +1,10 @@
+(define (problem problem_2_2)
+	(:domain sokoban_dom)
+	(:objects 1_1)
+	(:init
+		(adjacent x y)
+		(skip x y)
+		(agent_in start)
+		(box_in x)
+	)
+)
