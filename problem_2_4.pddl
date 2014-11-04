@@ -37,7 +37,7 @@
 		(skip 4_5 4_3)
 		(skip 5_2 3_2) (skip 5_2 5_4)
 		(skip 5_3 3_3)
-		(skip 5_4 3_4)
+		(skip 5_4 3_4) (skip 5_4 5_2)
 		(skip 6_2 4_2)
 		(skip 6_3 4_3)
 		(agent_in 3_5)
