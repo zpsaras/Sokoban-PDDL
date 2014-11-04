@@ -5,6 +5,8 @@
 		(adjacent 1_1 1_2)
 		(adjacent 1_2 1_1) (adjacent 1_2 1_3)
 		(adjacent 1_3 1_2)
+		(skip 1_1 1_3)
+		(skip 1_3 1_1)
 		(box_in 1_3)
 		(agent_in 1_2)
 	)
