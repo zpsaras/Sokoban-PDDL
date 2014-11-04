@@ -14,7 +14,27 @@
 %-------------------------------------------
 %	Problem 1
 %-------------------------------------------
-\item
+\item	
+\begin{enumerate}
+	%-----------------
+	%	a
+	%-----------------
+	\item See files.
+	
+	%-----------------
+	%	b
+	%-----------------
+	\item
+	The only objects are cells. Predicates determine what is in a cell. \\
+	Predicates: adjacent, skip, box\_in, agent\_in
+	
+	%-----------------
+	%	c
+	%-----------------
+	\item
+	PDDL is appropriate for describing such challenges because the rule set is sufficiently small and simple. It is easy to avoid over- or under-constraining the rule set. An over-constrained problem may return no solution even though one exists. An under-constrained problem may take far too long to reach a goal, or never reach one even if it is possible.
+	
+\end{enumerate}
 
 %-------------------------------------------
 %	Problem 2
@@ -59,39 +79,127 @@
 %-------------------------------------------
 %	Problem 3
 %-------------------------------------------
+
+%-----------------
+%	a
+%-----------------
 \item
 \begin{enumerate}
 \item
-\begin{tabular}{c c c}
+\begin{tabular}{c c}
 \begin{tabular}{| l | c |}
   \hline
   B & $f_B(B)$ \\ \hline
-  T & .001 \\ \hline
-  F & .999 \\
+  T & $.001$ \\ \hline
+  F & $.999$ \\
   \hline
 \end{tabular}
 &
 \begin{tabular}{| l | c |}
   \hline
   E & $f_E(E)$ \\ \hline
-  T & .002 \\ \hline
-  F & .998 \\
+  T & $.002$ \\ \hline
+  F & $.998$ \\
+  \hline
+\end{tabular}
+\end{tabular}
+
+\begin{tabular}{| c | c | c | c |}
+  \hline
+  A & B & E & $f_{A}(A, B, E)$ \\ \hline
+  T & T & T & $.95$ \\ \hline
+  T & T & F & $.94$ \\ \hline
+  T & F & T & $.29$ \\ \hline
+  T & F & F & $.001$ \\ \hline
+  F & T & T & $.05$ \\ \hline
+  F & T & F & $.06$ \\ \hline
+  F & F & T & $.71$ \\ \hline
+  F & F & F & $.999$ \\ \hline
+\end{tabular}
+
+\begin{tabular}{c c}
+\begin{tabular}{| l | c |}
+  \hline
+  A & $f_J(j, a)$ \\ \hline
+  T & $.90$ \\ \hline
+  F & $.05$ \\
   \hline
 \end{tabular}
 &
+\begin{tabular}{| l | c |}
+  \hline
+  A & $f_M(M,J)$ \\ \hline
+  T & $.70$ \\ \hline
+  F & $.01$ \\
+  \hline
+\end{tabular}
+\end{tabular}
+
+\begin{tabular}{| l | c |}
+  \hline
+  A & $f_{JM}(A)$ \\ \hline
+  T & $.90 * .70 = .63$ \\ \hline
+  F & $.05 * .01 = .0005$ \\
+  \hline
+\end{tabular}
+
 \begin{tabular}{| c | c | c | c |}
   \hline
-  A & B & E & $f_A(A, B, E)$ \\ \hline
-  T & T & T & .95 \\ \hline
-  T & T & F & .94 \\ \hline
-  T & F & T & .29 \\ \hline
-  T & F & F & .001 \\ \hline
-  F & T & T & .05 \\ \hline
-  F & T & F & .06 \\ \hline
-  F & F & T & .71 \\ \hline
-  F & F & F & .999 \\ \hline
+  A & B & E & $f_{AJM}(A, B, E)$ \\ \hline
+  T & T & T & $.95 * .63 = .5985$ \\ \hline
+  T & T & F & $.94 * .63 = .5922$ \\ \hline
+  T & F & T & $.29 * .63 = .1827$ \\ \hline
+  T & F & F & $.001 * .63 = .00063$ \\ \hline
+  F & T & T & $.05 * .0005 = .000025$ \\ \hline
+  F & T & F & $.06 * .0005 = .00003$ \\ \hline
+  F & F & T & $.71 * .0005 = .000355$ \\ \hline
+  F & F & F & $.999 * .0005 = .0004995$ \\ \hline
 \end{tabular}
+
+\begin{tabular}{| c | c | c |}
+\hline
+B & E & $f_{\overline{A}JM}(B, E)$ \\ \hline
+T & T & $.5985 + .000025 = .5985$ \\ \hline
+T & F & $.5922 + .00003 = .5922$ \\ \hline
+F & T & $.1827 + .000355 = .1931$ \\ \hline
+F & F & $.00063 + .0004995 = .001129$ \\ \hline
 \end{tabular}
+
+\begin{tabular}{| c | c | c |}
+\hline
+B & E & $f_{E\overline{A}JM}(B, E)$ \\ \hline
+T & T & $.5985 * .002 = .001197$ \\ \hline
+T & F & $.5922 * .998 = .5910$ \\ \hline
+F & T & $.1831 * .002 = .00037$ \\ \hline
+F & F & $.001129 * .998 = .001127$ \\ \hline
+\end{tabular}
+
+\begin{tabular}{| c | c |}
+  \hline
+  B& $f_{\overline{E}\overline{A}JM}(B)$ \\ \hline
+  T & $.001197 + .00037 = .5910$ \\ \hline
+  F & $.5910 + .001127 = .001497$ \\ \hline
+\end{tabular}
+
+\begin{tabular}{| c | c |}
+  \hline
+  B& $f_{B\overline{E}\overline{A}JM}(B)$ \\ \hline
+  T & $5910 * .001 = .000591$ \\ \hline
+  F & $.001497 * .999 = .001496$ \\ \hline
+\end{tabular}
+
+\fbox{$f_{B\overline{E}\overline{A}JM}(B) = \alpha < .000591, .001496 >$}
+
+
+%-----------------
+%	b	-- Zach
+%-----------------
+\item
+
+%-----------------
+%	c	-- Pat
+%-----------------
+\item
 
 \end{enumerate}
 
