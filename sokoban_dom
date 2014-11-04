@@ -3,7 +3,7 @@
     (:predicates (agent_in ?x)
                  (box_in ?x)
                  (adjacent ?x ?y)
-                 (possible_skip ?x ?y)
+                 (skip ?x ?y)
     )
     (:action move_agent
             :parameters (?s ?d)
@@ -16,7 +16,7 @@
     (:action push_box
             :parameters (?a ?b ?d)
             :precondition (and (adjacent ?a ?b)
-                               (possible_skip ?a ?d)
+                               (skip ?a ?d)
                                (box_in ?b)
                                (agent_in ?a)
                                (not (box_in ?d)))
