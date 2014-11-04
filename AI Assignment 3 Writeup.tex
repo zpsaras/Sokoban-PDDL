@@ -29,7 +29,7 @@
 	$P(B=true)=0.5$\\
 	$P(C=true)=0.8$\\
 	$P(D=true | A=true, B=true)=0.1$\\
-	$P(E=true|B=true, C=true)=0.3$\\
+	$P(E=true|B=true, C=true)=0.3$\\ \\
 	$P(A=true,B=true,C=true,D=true,E=true)$\\$=(0.2)*(0.5)*(0.8)*(0.1)*(0.3) = 0.0024$
 	%-----------------
 	%	b
@@ -39,12 +39,19 @@
 	$P(B=false)=0.5$\\
 	$P(C=false)=0.2$\\
 	$P(D=false|A=false,B=false)$\\$=1-P(D=true|A=false,B=false)=1-0.9=0.1$\\
-	$P(E=false|B=false,C=false)$\\=$1-P(E=true|B=false,C=false)=1-0.2=0.8$\\
+	$P(E=false|B=false,C=false)$\\=$1-P(E=true|B=false,C=false)=1-0.2=0.8$\\ \\
 	$P(A=false, B=false, C=false, D=false, E=false)$\\$=(0.8)*(0.5)*(0.2)*(0.1)*(0.8) = .0064$
 	%-----------------
 	%	c
 	%-----------------
 	\item
+	General form: $P(m|s)=\alpha <P(s|m)P(m),P(s|\neg m)*(P(\neg m)>$\\ \\
+	$P(A=false|B=true,C=true,D=true,E=true)$\\$=P(\neg A| B \wedge C \wedge D \wedge E)$\\ \\
+	$P(\neg A| B \wedge C \wedge D \wedge E)$\\$=\alpha <P(B \wedge C \wedge D \wedge E|\neg A)*P(\neg A),P(B \wedge C \wedge D \wedge E|A)*P(A)>$\\ \\
+	$P(B \wedge C \wedge D \wedge E|\neg A)*P(\neg A)$\\$ = (0.8*0.5*0.8*0.3*0.6)*0.8 = 0.04608 = f(x)$\\
+	$P(B \wedge C \wedge D \wedge E|A)*P(A) $\\$= (0.2*0.5*0.8*0.1*0.3)*0.2 = 0.00048 = f(\neg x)$\\
+	$\alpha = \frac{1.0}{f(x)+f(\neg x)}=\frac{1.0}{.04608+.00048} = 21.477$\\
+	$P(A=false|B=true,C=true,D=true,E=true$\\$ = \alpha * f(x) = 21.477 * .04608=.9897$
 	
 \end{enumerate}
 
