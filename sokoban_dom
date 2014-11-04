@@ -16,6 +16,7 @@
     (:action push_box
             :parameters (?a ?b ?d)
             :precondition (and (adjacent ?a ?b)
+							   (adjacent ?b ?d)
                                (skip ?a ?d)
                                (box_in ?b)
                                (agent_in ?a)
@@ -23,6 +24,6 @@
             :effect (and (agent_in ?b)
                          (box_in ?d)
                          (not (box_in ?b))
-                         (nod (agent_in ?a)))
+                         (not (agent_in ?a)))
     )
 )
