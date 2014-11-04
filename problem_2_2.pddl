@@ -1,5 +1,5 @@
 (define (problem problem_2_2)
-	(:domain sokoban_dom)
+	(:domain sokoban_domain)
 	(:objects 1_1 1_2 1_3 2_1 2_2 2_3 2_4 3_2 3_3 3_4 4_3 4_4 5_4 6_4)
 	(:init
 		(adjacent 1_1 1_2) (adjacent 1_1 2_1)
