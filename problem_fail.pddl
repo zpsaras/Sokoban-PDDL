@@ -1,0 +1,12 @@
+(define (problem problem_fail)
+	(:domain sokoban_domain_)
+	(:objects 1_1 1_2 1_3)
+	(:init
+		(adjacent 1_1 1_2)
+		(adjacent 1_2 1_1) (adjacent 1_2 1_3)
+		(adjacent 1_3 1_2)
+		(box_in 1_3)
+		(agent_in 1_2)
+	)
+	(:goal (and (box_in 1_1)))
+)
