@@ -8,4 +8,9 @@
         (adjacent 3_1 3_2) (adjacent 3_1 4_1)
         (adjacent 3_2 3_1) (adjacent 3_2 3_3) (adjacent 3_2 2_2) (adjacent 3_2 4_2)
         (adjacent 3_3 3_2) (adjacent 3_3 3_4) (adjacent 3_3 4_3)
-        
+        (adjacent 3_4 3_3) (adjacent 3_4 4_4)
+        (adjacent 4_1 3_1) (adjacent 4_1 4_2) (adjacent 4_1 5_1)
+        (adjacent 4_2 4_1) (adjacent 4_2 3_2) (adjacent 4_2 4_3) (adjacent 4_2 5_2)
+        (adjacent 4_3 4_2) (adjacent 4_3 3_3) (adjacent 4_3 4_4)
+        (adjacent 4_4 4_3) (adjacent 4_4 3_4)
+        (adjacent 5_1 4_1) (adjacent 5_1 5_2)
