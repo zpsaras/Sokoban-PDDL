@@ -32,5 +32,5 @@
 		(box_in 4_1)
     )
     (:goal (and (box_in 1_2)
-				(box_in 5_1))
+				(box_in 5_1)))
 )
