@@ -128,21 +128,21 @@
 &
 \begin{tabular}{| l | c |}
   \hline
-  A & $f_M(M,J)$ \\ \hline
+  A & $f_M(m,a)$ \\ \hline
   T & $.70$ \\ \hline
   F & $.01$ \\
   \hline
 \end{tabular}
-\end{tabular}
-
+\end{tabular}\\
+Every instance $P(J|a)$ and $P(m|a)$\\
 \begin{tabular}{| l | c |}
   \hline
   A & $f_{JM}(A)$ \\ \hline
   T & $.90 * .70 = .63$ \\ \hline
   F & $.05 * .01 = .0005$ \\
   \hline
-\end{tabular}
-
+\end{tabular}\\
+Every instance of $P(a | B, e)$\\
 \begin{tabular}{| c | c | c | c |}
   \hline
   A & B & E & $f_{AJM}(A, B, E)$ \\ \hline
@@ -154,8 +154,8 @@
   F & T & F & $.06 * .0005 = .00003$ \\ \hline
   F & F & T & $.71 * .0005 = .000355$ \\ \hline
   F & F & F & $.999 * .0005 = .0004995$ \\ \hline
-\end{tabular}
-
+\end{tabular}\\
+Summing over $A$\\
 \begin{tabular}{| c | c | c |}
 \hline
 B & E & $f_{\overline{A}JM}(B, E)$ \\ \hline
@@ -163,8 +163,8 @@ T & T & $.5985 + .000025 = .5985$ \\ \hline
 T & F & $.5922 + .00003 = .5922$ \\ \hline
 F & T & $.1827 + .000355 = .1931$ \\ \hline
 F & F & $.00063 + .0004995 = .001129$ \\ \hline
-\end{tabular}
-
+\end{tabular}\\
+Multiplying in $E$\\
 \begin{tabular}{| c | c | c |}
 \hline
 B & E & $f_{E\overline{A}JM}(B, E)$ \\ \hline
@@ -172,15 +172,15 @@ T & T & $.5985 * .002 = .001197$ \\ \hline
 T & F & $.5922 * .998 = .5910$ \\ \hline
 F & T & $.1831 * .002 = .00037$ \\ \hline
 F & F & $.001129 * .998 = .001127$ \\ \hline
-\end{tabular}
-
+\end{tabular}\\
+Summing over $E$\\
 \begin{tabular}{| c | c |}
   \hline
   B& $f_{\overline{E}\overline{A}JM}(B)$ \\ \hline
   T & $.001197 + .00037 = .5910$ \\ \hline
   F & $.5910 + .001127 = .001497$ \\ \hline
-\end{tabular}
-
+\end{tabular}\\
+Multiplying in $B$\\
 \begin{tabular}{| c | c |}
   \hline
   B& $f_{B\overline{E}\overline{A}JM}(B)$ \\ \hline
