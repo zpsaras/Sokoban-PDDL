@@ -222,7 +222,8 @@ Multiplying in $B$\\
 	%	a
 	%-----------------
 	\item
-	$E(C_{1}) = 0.70*1000 + 0.30*-400 = 580$
+	General form: $E(X) = x_1p_1 + x_2p_2 + ... + x_np_n$\\
+	\[E(C_{1}) = 0.70*1000 + 0.30*-400 = \$580\]
 	
 	%-----------------
 	%	b
@@ -238,7 +239,7 @@ Multiplying in $B$\\
 	$\alpha = \frac{1.0}{f(x)+f(\neg x)}$\\
 	$f(x) = P(Pass|q^{+})P(q^{+}) = 0.80*0.70 = 0.56$\\
 	$f(\neg x) = P(Pass|\neg q^{+})*(P(\neg q^{+}) = 0.35 * 0.30 = 0.105$\\
-	$\alpha = \frac{1.0}{f(x)+f(\neg x)} = \frac{1.0}{0.56+0.105} = \frac{1.0}{0.665} = 1.50376$\\
+	\[\alpha = \frac{1.0}{f(x)+f(\neg x)} = \frac{1.0}{0.56+0.105} = \frac{1.0}{0.665} = 1.50376\]\\
 	$P(pass) = \frac{1.0}{\alpha} = \frac{1.0}{1.50376}$\\
 	$P(pass) = 0.665$ $P(\neg pass) = 0.335$\\
 	\fbox{$P(q^{+}|Pass) = 1.50376*0.80*0.70 = 0.8421056$}\\
@@ -250,11 +251,20 @@ Multiplying in $B$\\
 	%	c
 	%-----------------
 	\item
+	\[E(Pass) = 1000*0.8421056 + -400*0.1578948 = 778.94768\]
+	\[E(\neg Pass) = 1000*0.0902256 + -400*0.2932332 = -27.06768\]
+	Given the car passes, the expected gain is \$778.95, so we should definitely buy it.\\
+	Given the car fails, the expected loss is \$27.07, so we definitely should not.\\
 	
 	%-----------------
 	%	d
 	%-----------------
 	\item
+	Let X = Gain if brought to the mechanic
+	\[E(X) = 0.665*778.95 + 0.335*(-27.07) = 508.9333 \]\\
+	Our expected gain if we go to the mechanic is \$508.93. This is not even including the \$100 to go to the mechanic. Including this, our expected gain is \$408.93.
+	\[ \$580 > \$408.93 \]\\
+	We should \textit{NOT} go to the mechanic.\\
 	
 \end{enumerate}
 
