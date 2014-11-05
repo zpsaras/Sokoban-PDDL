@@ -39,6 +39,7 @@
 %-------------------------------------------
 %	Problem 2
 %-------------------------------------------
+\pagebreak
 \item
 \begin{enumerate}
 	%-----------------
@@ -79,7 +80,7 @@
 %-------------------------------------------
 %	Problem 3
 %-------------------------------------------
-
+\pagebreak
 %-----------------
 %	a
 %-----------------
@@ -208,12 +209,54 @@ Multiplying in $B$\\
 %-------------------------------------------
 %	Problem 4
 %-------------------------------------------
-\item
+\pagebreak
+\item This is where problem 4 will go.
 
 %-------------------------------------------
-%	Problem 5		-- Wednesday
+%	Problem 5	
 %-------------------------------------------
+\pagebreak
 \item
+\begin{enumerate}
+	%-----------------
+	%	a
+	%-----------------
+	\item
+	$E(C_{1}) = 0.70*1000 + 0.30*-400 = 580$
+	
+	%-----------------
+	%	b
+	%-----------------
+	\item
+	$P(q^{+}|Pass) = \frac{P(Pass|q^{+})P(q^{+})}{P(Pass)} = \alpha P(Pass|q^{+})P(q^{+})$\\
+	$P(q^{-}|Pass) = \frac{P(Pass|q^{-})P(q^{-})}{P(Pass)} = \alpha P(Pass|q^{-})P(q^{-})$\\
+	$P(q^{+}|\neg Pass) = \frac{P(\neg Pass|q^{+})P(q^{+})}{P(\neg Pass)} = \alpha P(\neg Pass|q^{+})P(q^{+})$\\
+	$P(q^{-}|\neg Pass) = \frac{P(\neg Pass|q^{-})P(q^{-})}{P(\neg Pass)} = \alpha P(\neg Pass|q^{-})P(q^{-})$\\
+	For this problem we need to calculate the normalization factor, $\alpha$. To do this, we use the following formula.\\
+	$P(m|s)=\alpha <P(s|m)P(m),P(s|\neg m)*(P(\neg m)>$\\
+	$P(q^{+}|Pass)=\alpha <P(Pass|q^{+})P(q^{+}),P(Pass|\neg q^{+})*(P(\neg q^{+})>$\\
+	$\alpha = \frac{1.0}{f(x)+f(\neg x)}$\\
+	$f(x) = P(Pass|q^{+})P(q^{+}) = 0.80*0.70 = 0.56$\\
+	$f(\neg x) = P(Pass|\neg q^{+})*(P(\neg q^{+}) = 0.35 * 0.30 = 0.105$\\
+	$\alpha = \frac{1.0}{f(x)+f(\neg x)} = \frac{1.0}{0.56+0.105} = \frac{1.0}{0.665} = 1.50376$\\
+	$P(pass) = \frac{1.0}{\alpha} = \frac{1.0}{1.50376}$\\
+	$P(pass) = 0.665$ $P(\neg pass) = 0.335$\\
+	\fbox{$P(q^{+}|Pass) = 1.50376*0.80*0.70 = 0.8421056$}\\
+	\fbox{$P(q^{-}|Pass) = 1.50376*0.35*0.30 = 0.1578948$}\\
+	\fbox{$P(q^{+}|\neg Pass) = 1.50376*0.2*0.8 = 0.0902256$}\\
+	\fbox{$P(q^{-}|\neg Pass) = 1.50376*0.65*0.3 = 0.2932332$}\\
+	
+	%-----------------
+	%	c
+	%-----------------
+	\item
+	
+	%-----------------
+	%	d
+	%-----------------
+	\item
+	
+\end{enumerate}
 
 \end{enumerate}
 
