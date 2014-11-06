@@ -72,7 +72,7 @@
 	$P(B \wedge C \wedge D \wedge E|\neg A)*P(\neg A)$\\$ = (0.8*0.5*0.8*0.3*0.6)*0.8 = 0.04608 = f(x)$\\
 	$P(B \wedge C \wedge D \wedge E|A)*P(A) $\\$= (0.2*0.5*0.8*0.1*0.3)*0.2 = 0.00048 = f(\neg x)$\\
 	$\alpha = \frac{1.0}{f(x)+f(\neg x)}=\frac{1.0}{.04608+.00048} = 21.477$\\
-	$P(A=false|B=true,C=true,D=true,E=true$\\$ = \alpha * f(x) = 21.477 * 0.04608=\fbox{0.9897}$
+	$P(A=false|B=true,C=true,D=true,E=true)$\\$ = \alpha * f(x) = 21.477 * 0.04608=\fbox{0.9897}$
 
 	
 \end{enumerate}
@@ -223,7 +223,12 @@ Multiplying in $B$\\
 	%-----------------
 	\item
 	General form: $E(X) = x_1p_1 + x_2p_2 + ... + x_np_n$\\
-	\[E(C_{1}) = 0.70*1000 + 0.30*-400 = \$580\]
+	Gain if $q^+$: $x_1 = 4000 - 3000 = 1000$\\
+	$P(q^+) = p_1 = 0.70$\\
+	Gain if $q^-$: $x_2 = 4000 - 3000 - 1400 = -400$\\
+	$P(q^-)  = p_2 = 0.30$\\
+	\[E(C_{1}) = 0.70*1000 + 0.30*-400 = \$580\]\\
+	Expected gain \textit{WITHOUT} going to the mechanic is $\$580$\\
 	
 	%-----------------
 	%	b
@@ -262,7 +267,7 @@ Multiplying in $B$\\
 	\item
 	Let X = Gain if brought to the mechanic
 	\[E(X) = 0.665*778.95 + 0.335*(-27.07) = 508.9333 \]\\
-	Our expected gain if we go to the mechanic is \$508.93. This is not even including the \$100 to go to the mechanic. Including this, our expected gain is \$408.93.
+	Our expected gain if we go to the mechanic is \$508.93. This is not including the \$100 to go to the mechanic. Including this, our expected gain is \$408.93.
 	\[ \$580 > \$408.93 \]\\
 	We should \textit{NOT} go to the mechanic.\\
 	
