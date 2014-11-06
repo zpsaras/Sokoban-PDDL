@@ -218,7 +218,7 @@ The time and space requirements are dominated by the size of the largest factor 
 %	Problem 4
 %-------------------------------------------
 \pagebreak
-\item This is where problem 4 will go.
+\item
 \begin{enumerate}
 	%-----------------
 	%	a
@@ -234,6 +234,14 @@ The time and space requirements are dominated by the size of the largest factor 
 	%	b
 	%-----------------
 	\item
+	$P(Rain|MB(Rain)) = \alpha P(Rain|Cloudy)(P(WetGrass|Sprinkler))$\\
+	There are $4$ atomic states that can represent this.\\
+	$<C,S,R,W>$ can be showed as $<C,T,R,T>$, since Sprinkler and WetGrass are fixed as $True$. Now we are left with $2$ variables that can be either $True$ or $False$.\\
+	\fbox{$<T,T,T,T>$}\\
+	\fbox{$<F,T,T,T>$}\\
+	\fbox{$<T,T,F,T>$}\\
+	\fbox{$<F,T,F,T>$}\\
+	There are $2^2 = 4$ possible states.\\
 	
 	%-----------------
 	%	c
