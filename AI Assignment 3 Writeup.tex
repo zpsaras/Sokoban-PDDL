@@ -12,7 +12,7 @@
 \begin{enumerate}
 	
 %-------------------------------------------
-%	Problem 1
+%	Problem 1	-- Zach
 %-------------------------------------------
 \item	
 \begin{enumerate}
@@ -198,19 +198,48 @@ Multiplying in $B$\\
 \item
 
 %-----------------
-%	c	-- Pat
+%	c
 %-----------------
 \item
-
+\begin{enumerate}
+\item
+Enumeration (Recursive depth-first enumeration)\\
+Space: $O(n)$\\
+Time: $O(2^n)$\\
+Enumeration is inefficient because you repeat computations.\\
+\item
+Variable Elimination\\
+The time and space requirements are dominated by the size of the largest factor constructed during the operation of the algorithm, This is determined by the order of elimination of variables and the structure of the network.\\
 \end{enumerate}
 
-
+\end{enumerate}
 
 %-------------------------------------------
 %	Problem 4
 %-------------------------------------------
 \pagebreak
 \item This is where problem 4 will go.
+\begin{enumerate}
+	%-----------------
+	%	a
+	%-----------------
+	\item
+	$P(X|MB(X)) = \alpha P(X|U_1, ... , U_m)\prod_{Y_{i}}P(Y_i|Z_{i1}...)$\\
+	We will break down each part of the right side to show that this is the Markov Blanket.\\
+	$P(X|U_1, ... , U_m)$ Is the probability of X being true given its parents.\\
+	$\prod_{Y_{i}}P(Y_i|Z_{i1}...)$ Is the product over the probability of each child, given their parents. This can be more easily understood if we break down the product.\\
+	$P(Y_1|Z_{1,1}, ... , Z_{1,m})*P(Y_2|Z_{2,1}, ... ,Z_{2,m})*P(Y_3|Z_{3,1}, ... , Z_{3,m})$ Each 'm' representing the amount of parents of each $Y_i$. Each $Y_i$ represents the children of $X$.\\
+	
+	%-----------------
+	%	b
+	%-----------------
+	\item
+	
+	%-----------------
+	%	c
+	%-----------------
+	\item
+\end{enumerate}
 
 %-------------------------------------------
 %	Problem 5	
