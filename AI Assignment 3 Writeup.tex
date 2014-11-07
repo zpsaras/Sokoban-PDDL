@@ -1,6 +1,4 @@
 \documentclass[12pt,a4paper]{report}
-\usepackage{tikz}
-\usetikzlibrary{arrows, shapes}
 
 \begin{document}
 \title{Assignment 3 \\ \small{Classical Planning - Probabilistic Reasoning - Bayesian Networks and Exact Inference - Approximate Inference - Value of Information}}
@@ -247,6 +245,42 @@ The time and space requirements are dominated by the size of the largest factor 
 	%	c
 	%-----------------
 	\item
+	$S_1 = <T,T,T,T>$ $P(S_1) = 0.0396$\\
+	$S_2 = <F,T,T,T>$ $P(S_2) = 0.009$\\
+	$S_3 = <T,T,F,T>$ $P(S_3) = 0.0495$\\
+	$S_4 = <F,T,F,T>$ $P(S_4) = 0.18$\\
+	\\$S_1$ can transition to $S_2$ or $S_3$, but not $S_4$.\\
+	$S_2$ can transition to $S_1$ or $S_4$, but not $S_3$.\\
+	$S_3$ can transition to $S_1$ or $S_4$, but not $S_2$.\\
+	$S_4$ can transition to $S_2$ or $S_3$, but not $S_1$.\\
+	\\A state can transition to another state if only 1 variable changes.\\
+	\\$p_{i,j} = P(S_j,S_i)$\\
+	
+	\begin{tabular}{ c | c | c | c | c |}
+  	& $S_1$ & $S_2$ & $S_3$ & $S_4$\\ \hline
+	$S_1$ & $p_{1,1}$ & $p_{1,2}$ & $p_{1,3}$ & $p_{1,4}$ \\ \hline
+	$S_2$ & $p_{2,1}$ & $p_{2,2}$ & $p_{2,3}$ & $p_{2,4}$ \\ \hline
+	$S_3$ & $p_{3,1}$ & $p_{3,2}$ & $p_{3,3}$ & $p_{3,4}$ \\ \hline
+	$S_4$ & $p_{4,1}$ & $p_{4,2}$ & $p_{4,3}$ & $p_{4,4}$ \\ \hline
+	\end{tabular}\\
+	\\$p_{1,1} = P(S_1,S_1) = 1$\\
+	$p_{1,2} = P(S_2,S_1)$\\
+	$p_{1,3} = P(S_3,S_1)$\\
+	$p_{1,4} = P(S_4,S_1) = 0$\\
+	\\$p_{2,1} = P(S_1,S_2)$\\
+	$p_{2,2} = P(S_2,S_2) = 1$\\
+	$p_{2,3} = P(S_3,S_2) = 0$\\
+	$p_{2,4} = P(S_4,S_2)$\\
+	\\$p_{3,1} = P(S_1,S_3)$\\
+	$p_{3,2} = P(S_2,S_3) = 0$\\
+	$p_{3,3} = P(S_3,S_3) = 1$\\
+	$p_{3,4} = P(S_4,S_3)$\\
+	\\$p_{4,1} = P(S_1,S_4) = 0$\\
+	$p_{4,2} = P(S_2,S_4)$\\
+	$p_{4,3} = P(S_3,S_4)$\\
+	$p_{4,4} = P(S_4,S_4) = 1$\\
+	
+	
 \end{enumerate}
 
 %-------------------------------------------
