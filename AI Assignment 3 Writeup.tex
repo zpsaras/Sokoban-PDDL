@@ -17,14 +17,29 @@
 	%-----------------
 	%	a
 	%-----------------
-	\item See files.
+	\item See attached files. \texttt{sokoban\_dom, problem\_2\_*.pddl}
 	
 	%-----------------
 	%	b
 	%-----------------
 	\item
+	Blackbox was employed using graphplan and satz planners. Solutions files note which planner was used.
 	The only objects are cells. Predicates determine what is in a cell. \\
-	Predicates: adjacent, skip, box\_in, agent\_in
+	Predicates: adjacent, skip, box\_in, agent\_in \\
+	Operators: \\
+	\texttt{move\_agent}: moves the robot around the world but not through solid objects, i.e., walls and boxes.\\
+	\texttt{push\_box}: allows the robot to push a box \\
+	Test problems are to be found in the attached documents \\ 
+	\texttt{problem\_2\_1.pddl,  problem\_2\_1\_twoboxmodified.pddl, \\ problem\_2\_2.pddl, problem\_2\_3\_twoboxmodified.pddl, \\ problem\_2\_4.pddl} \\
+	Plans: \\
+	\texttt{sol\_2\_1.txt}: Solution was found trivially in just 13 milliseconds. \\
+	\texttt{sol\_2\_1\_twoboxmodified.txt}: Problem was a modified version of problem\_2\_1.pddl in which the world remained the same, however, another box and goal state were added. Plan was not generated in a timely fashion.\\
+	\texttt{problem\_2\_2.pddl} did not yeild any results. The plan took too long to generate and ended in a segfault. We do not believe this problem has a solution, however.\\
+	\texttt{sol\_2\_3\_twoboxmodified.txt} Is a modified version of the puzzle found in \texttt{Figure 2.3}. This was created in order to test complexity difference between two and three required goal states. This plan took 2 minutes, 57 seconds (176723ms) to generate. \\
+	\texttt{sol\_2\_3\_threeboxmodified.txt} We used a modified version of the puzzle foun din \texttt{Figure 2.3} because the given problem resulted in a segfault. This three-box modification preserved goal cells but rearranged to boxes in order to make a simpler plan. The plan was generated in 17 minutes, 51 seconds (1070937ms).\\
+	\texttt{problem\_2\_4.pddl} This problem also did not generate a plan in a timely fashion.
+	Each plan ended up being the same as a human-generated plan done by each of us. We found that each successively added goal state increased the complexity of the problem and thus the time to generate a solution in an exponential way. Though data is not given here, a single box version of the final puzzle would be expected to generate a plan in under a second.
+	
 	
 	%-----------------
 	%	c
@@ -193,7 +208,12 @@ Multiplying in $B$\\
 %-----------------
 %	b	-- Zach
 %-----------------
-\item
+\item let $j=J=true$ let $m=M=true$ \[\alpha P(B,j,m)\]
+\[=\sum_e \sum_a P(B,j,m,e,a)\]
+\[=\sum_e \sum_a P(e)P(B)P(a|e,B)P(j|a)P(m|a)\]
+\[=P(B) \sum_e P(e) \sum_a P(a|e,B)P(j|a)P(m|a)\]
+\[P(B)(P(e)(P(a|e,B)P(j|a)P(m|a)+P(\neg a | e,B)P(j| \neg a)P(m| \neg a))\] \[+ P(\neg e)(P(a| \neg e,B)P(j|a)P(m|a)+P(\neg a | \neg e,B)P(j| \neg a)P(m|\neg a)))\]
+There are four more computations in the tree enumeration algorithm.
 
 %-----------------
 %	c
