@@ -1,4 +1,4 @@
-hairy-dangerzone
+Sokoban-PDDL
 ================
 
-Sokoban-PDDL
+Formerly hairy-dangerzone
